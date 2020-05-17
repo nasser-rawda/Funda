@@ -1,0 +1,20 @@
+﻿@model List<Funda.Api.AgentModel>
+
+<p>Here is the list of top 10 real estate agents in Amsterdam based on number of their total advertisements</p>
+
+<table style="width:100%">
+    <tr>
+        <th>Seq</th>
+        <th>Agent Name</th>
+        <th>Total Ads</th>
+    </tr>
+    @foreach (var item in @Model)
+    {
+        <tr>
+            <th>@item.RowId</th>
+            <th>@item.AgentName </th>
+            <th>@item.Total </th>
+        </tr>
+
+    }
+</table>
